@@ -1,16 +1,14 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
-        # Time Complexity: O(n)
-        res = 0 
-        l, r = 0, 0
+        res = 0
+
+        l, r = 0, 0 
 
         while r < len(nums) - 1:
             farthest = 0 
-            # within that window 
-            for i in range(l,r+1):
+            for i in range(l, r+1):
                 farthest = max(farthest, i + nums[i])
             l = r + 1 
-            r = farthest 
-            # res will have the number of jumps 
+            r = farthest
             res += 1 
         return res 
