@@ -1,6 +1,8 @@
 class Solution:
     def checkValidString(self, s: str) -> bool:
         # Time Complexity: O(n)
+        # leftMin: minimum possible number of unmatched left parentheses
+        # leftMax: maximum possible number of unmatched left parentheses
         leftMin, leftMax = 0, 0
 
         for c in s:
