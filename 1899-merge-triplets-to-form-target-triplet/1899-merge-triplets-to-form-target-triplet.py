@@ -1,6 +1,5 @@
 class Solution:
     def mergeTriplets(self, triplets: List[List[int]], target: List[int]) -> bool:
-        # Time Complexity: O(n)
         good = set()
 
         for t in triplets:
@@ -10,4 +9,4 @@ class Solution:
             for i, v in enumerate(t):
                 if v == target[i]:
                     good.add(i)
-        return len(good) == 3
+        return len(good) == 3 
